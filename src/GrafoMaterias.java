@@ -100,6 +100,8 @@ public class GrafoMaterias {
 	}
 	
 	/**
+	 * NO ES OPCION COMO SOLUCION PARA LA PROBLEMATICA DE LAS MATERIAS
+	 * 
 	 * Metodo que encuentra el orden topologico apartir de cursar las materias segun el orden del csv, 
 	 * peso si esta tiene algun requisito se prioriza el completar este requisitos para asi lograr
 	 * cursar la materia en la que se estaba.
@@ -119,7 +121,12 @@ public class GrafoMaterias {
 		
 		return ordenMaterias;
 	}
-	
+	/**
+	 * Metodo auxiliar para lograr completar el metodo de ordenTopologicoDirecto()
+	 * @param ordenMaterias La queue donde agregaremos las materias en el orden a cursar
+	 * @param i Valor del numero de columna en la que estoy del matriz de adyacencias
+	 * @param agregado Arreglo que me permite saber que vertices del grafo de materias ya agrege a la lista de materias
+	 */
 	public void ordenTopologicoRec(Queue<String> ordenMaterias, int i, boolean[] agregado) {
 		
 		if(!agregado[i]) {
