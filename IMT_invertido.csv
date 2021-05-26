@@ -1,0 +1,62 @@
+Clave,Materia,Requisito
+VA2013,Topicos IV,
+VA2012,Topicos III,
+VA2011,Topicos II,
+MR3032,Introduccion a la vida profesional,
+MR3031,Robotica industrial,M2007
+MR3016,Proyecto de ingenieria mecatronica,MR3009/IN2025
+HS2006,Etica aplicada,H1018
+VA2010,Topicos I,
+MR3029,Laboratorio integral de control automatico,MR2007
+MR3026,Automatizacion de sistemas de manufactura,M2019
+MR3012,Laboratorio de mecatronica,M2019/M2031/MR3009
+MR3009,Diseño mecatronico,M2029/MR2007/TE2023
+IN2025,Evaluacion y administracion de proyectos,
+HS2005,Ciudadania,
+TE2034,Laboratorio integral de electronica,TE2033
+TE2023,Microcontroladores,MR2000
+MR2019,Proyecto de redes industriales,MR2009
+MR2009,Redes industriales,MR2000
+MR2007,Control computarizado,MR2004
+M2031,Tecnologias de manufactura,M2028
+M2029,Diseño y desarrollo de maquinas,M2023/M2007
+TE2033,Electronica aplicada,TE1003
+MR2004,Ingenieria de control,MA2010/MA3002
+MR2003,Actuadores,TE2032
+M2028,Tecnologia de materiales,Q1001/IQ2001
+M2007,Analisis y simulacion de mecanismos,M1005
+EM1005,Emprendimiento,
+TE2035,Analisis de señales y sistemas,MA2010
+TE1003,Electronica,TE1002
+MR2005,Laboratorio de instrumentacion mecatronica,TE2032
+MA1006,Probabilidad y estadística,MA1017
+M2023,Mecanica de materiales,M1003
+IQ2001,Termondinamica,F1003/MA1017
+EC1010,Economía para la creación de negocios,
+TE2032,Circuitos eléctricos II,TE1002
+MR2002,Laboratorio de automatismos logicos,MR2000
+MR2000,Automatismos logicos,TE1002
+MA3002,Matematicas avanzadas,MA2009
+M2025,Metodos numericos,MA2010
+M1006,Dibujo computarizado,F1002
+H1018,"Etica, persona y sociedad",H1040
+TE1002,Circuitos electricos I,MA1017
+MA2010,Ecuaciones diferenciales,MA1017
+MA2009,Matematicas III,MA1017
+M1005,Dinamica,M1003
+H2001,Expresión verbal en el ámbito profesional,H1040
+F1005,Electricidad y magnetismo,F1003/MA1017
+Q1004,Laboratorio de quimica,Q1001
+MR1001,Informática industrial,TC1017
+MA1017,Matematicas II,MA1015
+M1003,Estática,F1002/MA1015
+HS2000,Humanidades y bellas artes,
+F1003,Fisica II,F1002/MA1015
+DS1003,Ciencias naturales y desarrollo sustentable,
+TC1017,Solucion de problemas con programacion,
+Q1001,Quimica,
+MR1002,Introduccion a la carrera,
+MA1015,Matematicas I,
+H1040,Análisis y expresión verbal,
+H1016,Lengua Extranjera,
+F1002,Fisica I,
