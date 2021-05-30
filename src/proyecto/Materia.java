@@ -1,3 +1,5 @@
+package proyecto;
+
 /**
  * Clase que nos permite generar objetos de materias para manipularlo de mejor forma la informacion una vez recibida
  * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673

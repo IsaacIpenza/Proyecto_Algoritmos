@@ -1,3 +1,5 @@
+package proyecto;
+
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.LinkedList;
@@ -88,7 +90,7 @@ public class GrafoMaterias {
 							desbloqueaMaterias = true;
 						}
 
-						if(matriz[j][i] == 1 && !agregado[j]) {
+						if(matriz[j][i] == 1 && (!agregado[j] || materiasDelSemestre.contains(this.nombreVertice[j]))) {
 							agregar = false;
 						}
 					}
