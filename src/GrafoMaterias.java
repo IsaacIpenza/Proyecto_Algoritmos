@@ -3,6 +3,11 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * 
+ * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
+ *
+ */
 public class GrafoMaterias {
 	
 	private int[][] matriz;
@@ -53,6 +58,71 @@ public class GrafoMaterias {
 	}
 	
 	/**
+	 * ALGORITMO VORAZ
+	 *  Metodo  que genera el ordenTopologico apartir de la cantidad de materias que se quieren llevar por semestre cuidando todo el tiempo
+	 *  que no se este cursando ningun requisito a la par.
+	 *  Si el valor de MPS es muy grande es muy probable que pocos sean los semestres que si puedan cursar esa cantidad de materias.
+	 * @param MPS Numero entero con la cantidad de materias a querer cursar en 1 semestre
+	 * @return
+	 */
+	public Hashtable<Integer,Queue<String>> ordenTopologicoIdeal(int MPS){
+		
+		Hashtable<Integer,Queue<String>> ordenTopologicoMaterias = new Hashtable<>();
+		Queue<String> materiasNoDesbloqueanRequisitos = new LinkedList<String>();
+		boolean[] agregado = new boolean[this.size];
+		int materiasAgregadas = 0;
+		int semestre = 1;
+		
+		while(materiasAgregadas < this.size){
+
+			Queue<String> materiasDelSemestre = new LinkedList<String>();
+
+			for (int i = 0; i < this.size && materiasAgregadas < this.size; i++) {
+
+				boolean agregar = true;
+				boolean desbloqueaMaterias = false;
+
+				if(!agregado[i]) {
+					for (int j = 0; j < this.size; j++) {
+						if(matriz[i][j] == 1) {
+							desbloqueaMaterias = true;
+						}
+
+						if(matriz[j][i] == 1 && !agregado[j]) {
+							agregar = false;
+						}
+					}
+				
+
+
+					if(agregar){
+						if(desbloqueaMaterias) {
+							materiasDelSemestre.add(this.nombreVertice[i]);
+						}else {
+							materiasNoDesbloqueanRequisitos.add(this.nombreVertice[i]);
+
+						}
+						agregado[i] = true;
+						materiasAgregadas++;
+					}
+				}
+			}
+
+			while(materiasDelSemestre.size() < MPS && !materiasNoDesbloqueanRequisitos.isEmpty()) {
+				materiasDelSemestre.add(materiasNoDesbloqueanRequisitos.poll());
+			}
+			
+			ordenTopologicoMaterias.put(semestre++, materiasDelSemestre);		
+		}
+		
+		ordenTopologicoMaterias.put(0, materiasNoDesbloqueanRequisitos);
+		
+		return ordenTopologicoMaterias;
+	}
+
+	/**
+	 * ALGORITMO VORAZ
+	 * RESULTADO NO COMPLETAMENTE OPTIMO PARA EL PROBLEMA
 	 * Metodo que genera el orden topologico de manera directa tomando primero todas aquellas materias
 	 * que no tienen requisitos y luego las que ya se cumplio el requisitos y asi sucesivamente.
 	 * @return Un queue con el orden en el que las materias se deben de cursar.
@@ -71,8 +141,8 @@ public class GrafoMaterias {
 				
 				if(!agregado[i]) {
 					for (int j = 0; j < this.size; j++) {
-						if(matriz[j][i] == 1) {  //iteramos los valores de las filas sobre una columna
-							agregar = false;
+						if(matriz[j][i] == 1) {		//iteramos los valores de las filas sobre una columna
+							agregar = false;		//esta linea  se puede eliminar al tener el break en seguida
 							break;
 						}
 					}
@@ -89,7 +159,7 @@ public class GrafoMaterias {
 				if(agregado[i]) {
 					for (int j = 0; j < this.size; j++) {
 						if(matriz[i][j] == 1) { //iteramos los valores de las columnas sobre una fila
-							matriz[i][j] = 0;;
+							matriz[i][j] = 0;
 						}
 					}
 				}
@@ -100,15 +170,15 @@ public class GrafoMaterias {
 	}
 	
 	/**
+	 * ALGORITMO VORAZ
 	 * NO ES OPCION COMO SOLUCION PARA LA PROBLEMATICA DE LAS MATERIAS
-	 * 
 	 * Metodo que encuentra el orden topologico apartir de cursar las materias segun el orden del csv, 
 	 * peso si esta tiene algun requisito se prioriza el completar este requisitos para asi lograr
 	 * cursar la materia en la que se estaba.
 	 * No considera el no poder cursar materia y sus requisitos al mismo tiempo.
 	 * @return Un queue con el orden en el que las materias se deben de cursar.
 	 */
-	public Queue<String> ordenTopologicoDirecto() {
+	public Queue<String> ordenTopologicoEsValidoEstarCursandoRequisitos() {
 		
 		Queue<String> ordenMaterias =  new LinkedList<String>();
 		boolean[] agregado = new boolean[this.size];
@@ -122,7 +192,7 @@ public class GrafoMaterias {
 		return ordenMaterias;
 	}
 	/**
-	 * Metodo auxiliar para lograr completar el metodo de ordenTopologicoDirecto()
+	 * Metodo auxiliar para lograr completar el metodo de ordenTopologicoNoParalelo()
 	 * @param ordenMaterias La queue donde agregaremos las materias en el orden a cursar
 	 * @param i Valor del numero de columna en la que estoy del matriz de adyacencias
 	 * @param agregado Arreglo que me permite saber que vertices del grafo de materias ya agrege a la lista de materias

@@ -8,6 +8,11 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
+/**
+ * Clase que nos permite la extraccion de informacion de un documento .csv con el formato correspondiente
+ * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
+ *
+ */
 public class CsvMaterias {
 
 	String fileName;
