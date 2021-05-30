@@ -5,10 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Queue;
-
 import javax.swing.JOptionPane;
-
 import userInterface.VentanaInicio;
+import utils.ImprimirOrden;
 
 /**
  * Proyecto Final - Main
@@ -29,31 +28,7 @@ public class ProyectoMain {
 		return grafoMaterias;
 	}
 	
-	public static void imprimirOrdenTopologico(Hashtable<Integer,Queue<String>> ordenMaterias, int MPS) {
-		int semestre = 1;
-		for (int i = 1; i < ordenMaterias.size(); i++) {
-
-				System.out.println();
-				System.out.println(" \t" + semestre + "° Semestre");
-				for (int j = 0; j < MPS && !ordenMaterias.get(i).isEmpty(); j++) {
-						System.out.println("--> " + ordenMaterias.get(i).poll());
-				}
-				
-				semestre++;
-		}
-		
-		while(!ordenMaterias.get(0).isEmpty()) {
-			System.out.println();
-			System.out.println(" \t" + semestre + "° Semestre");
-			
-			for (int j = 0; j < MPS && !ordenMaterias.get(0).isEmpty(); j++) {
-				System.out.println("--> " + ordenMaterias.get(0).poll());
-			}
-			
-			semestre++;
-
-		}
-	}
+	
 
 	public static void main(String[] args) throws FileNotFoundException, Exception {
 		
@@ -79,7 +54,7 @@ public class ProyectoMain {
 //		
 //		Hashtable<Integer,Queue<String>> ordenMaterias = grafoMaterias.ordenTopologicoIdeal(MPS);
 //
-//		imprimirOrdenTopologico(ordenMaterias, MPS);
+//		ImprimirOrden.imprimirOrdenTopologico(ordenMaterias, MPS);
 //		
 		
 		EventQueue.invokeLater(new Runnable() {

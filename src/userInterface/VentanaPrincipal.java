@@ -4,10 +4,12 @@ package userInterface;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import utils.ImprimirOrden;
+
 import java.awt.Font;
 import java.util.Hashtable;
 import java.util.Queue;
@@ -21,26 +23,10 @@ import java.awt.Color;
 public class VentanaPrincipal {
 
 	public JFrame frame;
-	private JScrollPane scrll;
 	public Hashtable<Integer,Queue<String>> ordenMaterias;
 	int MPS;
 	String title;
 
-//	/**
-//	 * Launch the application.
-//	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					VentanaPrincipal window = new VentanaPrincipal();
-//					window.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the application.
@@ -56,8 +42,10 @@ public class VentanaPrincipal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		
 		frame = new JFrame();
-		frame.setBounds(100, 100, 502, 502);
+		frame.setBounds(300, 100, 502, 502);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -73,7 +61,7 @@ public class VentanaPrincipal {
 		textArea.setBackground(new Color(204, 255, 255));
 		scrollPane.setViewportView(textArea);
 		
-		textAreaImprimirOrdenTopologico(textArea, ordenMaterias, MPS);
+		ImprimirOrden.textAreaImprimirOrdenTopologico(textArea, ordenMaterias, MPS);
 		
 		JButton RegresarButton = new JButton("Regresar");
 		RegresarButton.addActionListener(new ActionListener() {
@@ -89,8 +77,7 @@ public class VentanaPrincipal {
 		JButton Pdf_Button = new JButton("Guardar como PDF");
 		Pdf_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				
+				ImprimirOrden.imprimirOrdenTopologicoPdf(textArea, title);
 			}
 		});
 		Pdf_Button.setBounds(295, 353, 148, 23);
@@ -106,34 +93,6 @@ public class VentanaPrincipal {
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 	}
 	
-	public static void textAreaImprimirOrdenTopologico(JTextArea textArea, Hashtable<Integer,Queue<String>> ordenMaterias, int MPS) {
-		
-		textArea.append("Como cursar materias: ");	
-
-		int semestre = 1;
-		for (int i = 1; i < ordenMaterias.size(); i++) {
-
-			textArea.append("\n");	
-			textArea.append("\t" + semestre + "° Semestre \n");	
-			for (int j = 0; j < MPS && !ordenMaterias.get(i).isEmpty(); j++) {
-				textArea.append("--> " + ordenMaterias.get(i).poll() + "\n");
-
-			}
-			semestre++;
-		}
-
-		while(!ordenMaterias.get(0).isEmpty()) {
-
-			textArea.append("\n");	
-			textArea.append("\t" + semestre + "° Semestre \n");	
-			for (int j = 0; j < MPS && !ordenMaterias.get(0).isEmpty(); j++) {
-				textArea.append("--> " + ordenMaterias.get(0).poll() + "\n");
-			}
-
-			semestre++;
-
-		}
-	}
 	
 	
 }
