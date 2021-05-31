@@ -1,12 +1,15 @@
 package userInterface;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -24,6 +27,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import java.awt.Toolkit;
 
 
 public class VentanaInicio {
@@ -57,6 +61,9 @@ public class VentanaInicio {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
 		frame.setLocationRelativeTo(null);
+		
+		Image icon = new ImageIcon(getClass().getResource("/utils/yCuandoLasCursoIcono.png")).getImage();
+		frame.setIconImage(icon);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(51, 204, 204));

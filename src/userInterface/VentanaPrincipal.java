@@ -11,10 +11,12 @@ import javax.swing.SwingConstants;
 import utils.ImprimirOrden;
 
 import java.awt.Font;
+import java.awt.Image;
 import java.util.Hashtable;
 import java.util.Queue;
 
 import javax.swing.JTextArea;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -48,6 +50,9 @@ public class VentanaPrincipal {
 		frame.setSize(502, 502);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
+		
+		Image icon = new ImageIcon(getClass().getResource("/utils/yCuandoLasCursoIcono.png")).getImage();
+		frame.setIconImage(icon);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 255, 255));
@@ -93,7 +98,5 @@ public class VentanaPrincipal {
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 	}
-	
-	
 	
 }
