@@ -27,9 +27,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
-import java.awt.Toolkit;
 
-
+/**
+ * Ventana de Inicio del Programa
+ * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
+ *
+ */
 public class VentanaInicio {
 
 	public JFrame frame;
@@ -62,7 +65,7 @@ public class VentanaInicio {
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
 		frame.setLocationRelativeTo(null);
 		
-		Image icon = new ImageIcon(getClass().getResource("/utils/yCuandoLasCursoIcono.png")).getImage();
+		Image icon = new ImageIcon("yCuandoLasCursoIcono.png").getImage();
 		frame.setIconImage(icon);
 		
 		JPanel panel_3 = new JPanel();

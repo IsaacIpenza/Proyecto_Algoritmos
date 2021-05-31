@@ -15,7 +15,11 @@ import com.itextpdf.text.pdf.PdfWriter;
  
 
 
-
+/**
+ * Clase con metodos auxiliares que nos  permiten imprimir el orden  topologico en diversos puntos del  programa
+ *  @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
+ *
+ */
 public class ImprimirOrden {
 
 	public static void imprimirOrdenTopologico(Hashtable<Integer,Queue<String>> ordenMaterias, int MPS) {

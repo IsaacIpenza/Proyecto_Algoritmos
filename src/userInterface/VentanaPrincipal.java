@@ -22,6 +22,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
+/**
+ * Ventana Informativa donde se mostrara como se cursaran las materias
+ * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
+ *
+ */
 public class VentanaPrincipal {
 
 	public JFrame frame;
@@ -51,7 +56,7 @@ public class VentanaPrincipal {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		
-		Image icon = new ImageIcon(getClass().getResource("/utils/yCuandoLasCursoIcono.png")).getImage();
+		Image icon = new ImageIcon("yCuandoLasCursoIcono.png").getImage();
 		frame.setIconImage(icon);
 		
 		JPanel panel = new JPanel();
