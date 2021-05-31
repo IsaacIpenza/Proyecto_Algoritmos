@@ -5,6 +5,8 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import javax.swing.JOptionPane;
+
 /**
  * 
  * @author Isaac Benjamin Ipenza Retamozo A01228344 / Juan Ramon Benitez Flores A01229673
@@ -17,6 +19,9 @@ public class GrafoMaterias {
 	private String[] nombreVertice;
 	private Hashtable<String, Integer> posVertice;
 	private Hashtable<String, String> clave_materia; // <Clave, Materia>
+	
+	ArrayList<String> errorClaves = new ArrayList<>();
+	String errorMsg ="\tRequisitos no encontrado en lista de materias: \n";
 
 	public GrafoMaterias(int numeroDeMaterias) {
 		this.size = 0;
@@ -36,6 +41,7 @@ public class GrafoMaterias {
 	public void agregarAristas(Materia materia) {
 		String[] requisitos = materia.getRequisitos();
 		
+		
 		for (int i = 0; i < requisitos.length; i++) {
 			if(!requisitos[i].isEmpty()) {
 				if(this.clave_materia.containsKey(requisitos[i])) {
@@ -43,9 +49,16 @@ public class GrafoMaterias {
 				}else {
 					System.out.println(materia.getClave() + " - " + materia.getNombreMateria()
 							+ " tienen un requisito con clave " + requisitos[i] + " que no existe");
+					
+					if(!errorClaves.contains(requisitos[i])){
+						
+						errorClaves.add(requisitos[i]);
+						errorMsg += "\n - Materia con clave " + requisitos[i];
+					}
 				}
 			}
 		}
+		
 	}
 	
 	public void agregarDatos(ArrayList<Materia> materiasList) {
@@ -57,6 +70,11 @@ public class GrafoMaterias {
 		for (Materia materia : materiasList) {
 			agregarAristas(materia);
 		}
+		
+		if(errorClaves.size() > 0) {
+			JOptionPane.showMessageDialog(null, errorMsg, "Error en requisitos", JOptionPane.OK_OPTION);
+		}
+		
 	}
 	
 	/**

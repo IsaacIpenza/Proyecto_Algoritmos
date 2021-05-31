@@ -3,11 +3,7 @@ package proyecto;
 import java.awt.EventQueue;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.Queue;
-import javax.swing.JOptionPane;
 import userInterface.VentanaInicio;
-import utils.ImprimirOrden;
 
 /**
  * Proyecto Final - Main
@@ -31,31 +27,6 @@ public class ProyectoMain {
 	
 
 	public static void main(String[] args) throws FileNotFoundException, Exception {
-		
-//		String fileName = "IMT.csv";
-//		String[] headers = {"Clave","Materia","Requisitos"};
-//		
-//		CsvMaterias csvMaterias = new  CsvMaterias(fileName, headers);
-//		ArrayList<Materia> materiasList = csvMaterias.extraerInformacion();
-//		
-//		GrafoMaterias grafoMaterias = new GrafoMaterias(materiasList.size());
-//		grafoMaterias.agregarDatos(materiasList);
-//		
-//		System.out.println("Materias cargadas exitosamente!!!");
-//		System.out.println();
-//
-//		System.out.println();
-//		System.out.println("Orden de las Materias");
-//		System.out.println();
-//		
-//		String materiasPorSemestre = JOptionPane.showInputDialog("¿Cuantas materias se cursaran por semestre?", 7);
-//		int	MPS = Integer.parseInt(materiasPorSemestre);
-//			
-//		
-//		Hashtable<Integer,Queue<String>> ordenMaterias = grafoMaterias.ordenTopologicoIdeal(MPS);
-//
-//		ImprimirOrden.imprimirOrdenTopologico(ordenMaterias, MPS);
-//		
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

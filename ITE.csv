@@ -1,0 +1,62 @@
+Clave,Materia,Requisito
+DS1003,Natural sciences and sustainable development,
+F1002,Physics I,
+H1016,Foreign language,
+MA1015,Mathematics I,
+Q1001,Chemistry,
+TC1014,Programming fundamentals,
+TE1017,Introduction to Electronic and Computer Engineering,
+F1003,Physics II,F1002/MA1015
+H1040,Verbal expression and analysis,
+HS2000,Humanities and fine arts,
+MA1017,Mathematics II,MA1015
+Q1004,Chemistry laboratory,Q1001
+TC2016,Object-oriented programming,TC1014
+TE1010,Digital systems,
+H1018,Ethics self and society,H1040
+MA2009,Mathematics III,MA1017
+MA2010,Differential equations,MA1017
+TE1002,Electrical circuits I,MA1017
+TE1011,Digital systems laboratory,TE1010
+TE2030,Advanced digital systems,TE1010
+H2001,Verbal expressions in the workplace,H1040
+M2025,Numerical methods in engineering,MA2010
+MA1006,Probability and statistics,MA1017
+TE1014,Electric circuits and measurements laboratory,MA1017/TE1002
+TE2005,Electromagnetic fields,MA2010
+TE2031,Computer architecture,TE2030
+TE2032,Electrical circuits II,TE1002
+EC1010,Economy to business creation,
+F2006,Optics and modern physics,TE2005
+MA3002,Advanced mathematics,MA2009
+TC1018,Data structures,TC2016
+TC2018,Introduction to networks,TE1010
+TE1003,Electronics,TE1002
+EM1005,Entrepreneurship,
+TC2022,Network interconnection,TC2018
+TE2023,Microcontrollers,TE1010
+TE2024,Microcontroller laboratory,TE2023
+TE2033,Applied Electronics,TE1003
+TE2034,Integral electronics laboratory,TE2033
+TE2035,Analysis of signals and systems,MA2010
+MR2004,Control engineering,MA2010/MA3002
+TC2008,Operating systems,TE2023
+TE2019,Digital signal processing laboratory,TE2040
+TE2038,Computer equipment interfaces,TE2023
+TE2040,Digital signal processing,TE2035
+VA2010,Topics I,
+VA2011,Topics II,
+HS2005,Citizenship,
+MR3028,Control engineering laboratory,MR2004
+TE3032,Digital communications,TE2035
+TE3059,Embedded systems,TE2023
+TE3060,Embedded systems laboratory,TE2023/TE2024
+VA2012,Topics III,
+VA2013,Topics IV,
+HS2006,Applied ethics,
+IN2025,Project evaluation and management,
+TE3038,Comunications system laboratory,TE3032
+TE3062,Integral electronic technologies project,TE2023
+TE3064,Introduction to professional development,
+VA2014,Topics V,
+VA2015,Topics VI,

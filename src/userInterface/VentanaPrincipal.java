@@ -45,8 +45,9 @@ public class VentanaPrincipal {
 		
 		
 		frame = new JFrame();
-		frame.setBounds(300, 100, 502, 502);
+		frame.setSize(502, 502);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 255, 255));

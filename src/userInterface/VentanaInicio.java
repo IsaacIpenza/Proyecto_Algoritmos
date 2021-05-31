@@ -53,15 +53,16 @@ public class VentanaInicio {
 		frame = new JFrame("Proyecto Final");
 		frame.getContentPane().setBackground(new Color(255, 255, 255));
 		frame.setBackground(new Color(255, 255, 255));
-		frame.setBounds(300, 100, 300, 440);
+		frame.setSize(300, 440);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new BorderLayout(0, 0));
+		frame.setLocationRelativeTo(null);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(new Color(51, 204, 204));
 		frame.getContentPane().add(panel_3, BorderLayout.NORTH);
 		
-		JLabel lblNewLabel = new JLabel(".. y como las curso?");
+		JLabel lblNewLabel = new JLabel("... y cuando las curso?");
 		panel_3.add(lblNewLabel);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -120,10 +121,10 @@ public class VentanaInicio {
 				
 				
 				if(rdbtnITE.isSelected()) {
-					carreraCsv = "IMT_invertido.csv";
+					carreraCsv = "ITE.csv";
 					carreraName = "ITE";
 				}else if(rdbtnISC.isSelected()){
-					carreraCsv = "IMT_invertido.csv";
+					carreraCsv = "ISC.csv";
 					carreraName = "ISC";
 				}else if(rdbtnIMT.isSelected()){
 					carreraCsv = "IMT.csv";

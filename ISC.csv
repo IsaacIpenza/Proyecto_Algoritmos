@@ -1,0 +1,62 @@
+Clave,Materia,Requisito
+F1002,Fisica I,
+H1016,Lengua Extranjera,
+TC1003,Matematicas discretas,
+MA1015,Matematicas I,
+TC1023,Introduccion a la carrera,
+DS1003,Ciencias naturales y desarrollo sustentable,
+TC1014,Fundamentos de programacion,
+H1040,Análisis y expresión verbal,
+AD1005,Administracion e innovacion en modelos de negocios,
+TC1015,Fundamentos de diseño interactivo,TC1014
+TC1016,Organizacion computacional,TC1014
+MA1017,Matematicas II,MA1015
+TC2016,Programacion orientada a objetos,TC1014
+F1005,Electricidad y magnetismo,F1002/MA1017
+H1018,Etica persona y sociedad,H1040
+MA1006,Probabilidad y estadística,MA1017
+MA2009,Matematicas III,MA1017
+TC1018,Estructura de datos,TC2016
+TC1019,Fundamentos de ingenieria de software,TC1014
+H2001,Expresion verbal en el ambito profesional,H1040
+TC1020,Bases de datos,TC1019
+TC1021,Proyecto de desarrollo de videojuegos,TC1018
+TC2017,Analisis y diseño de algoritmos,TC1018
+TC2018,Fundamentos de redes,TC1016
+TC2019,Metodos numericos en ingenieria,TC1014/MA1017
+MA1019,Algebra lineal,MA1017
+TC2004,Analisis y modelacion de sistemas de software,TC1020
+HS2000,Humanidades y bellas artes,
+TC2008,Sistemas operativos,TC1016
+TC2020,Matematicas computacionales,TC1003/TC1018
+TC2022,Interconexion de redes,TC2018
+EM1005,Emprendimiento,
+TC2024,Proyecto de desarrollo para dispositivos moviles,TC2004
+TC2025,Programacion avanzada,TC2017/TC2008
+TC3041,Bases de datos avanzadas,TC1020
+TC3045,Calidad y pruebas de software,TC2004
+TI2011,Evaluacion y administracion de proyectos,
+HS2005,Ciudadania,
+TC2006,Lenguajes de programacion,TC2020/TC2017
+TC2026,Desarrollo de aplicaciones web,TC2022
+TC2027,Seguridad informatica,TC2008/TC2018
+TC3002,Administracion de proyectos de ingenieria de software,TI2011/TC2004
+VA2010,Topicos I,
+TC2007,Metodos cuantitativos y simulacion,MA1006/TC1018
+TC3022,Graficas computacionales,MA2009/TC2017
+TC3048,Diseño de compiladores,TC2006
+TC3049,Diseño y arquitectura de software,TC2004
+TC3052,Laboratorio de desarrollo de aplicaciones web,TC2026
+VA2011,Topicos II,
+VA2012,Topicos III,
+HS2006,Etica aplicada,
+TC2011,Sistemas inteligentes,TC2006
+TC3054,Proyecto integrador para el desarrollo de soluciones empresariales,TC2024
+TI3035,Introducccion a la vida profesional,
+VA2013,Topicos IV,
+VA2014,Topicos V,
+VA2015,Topicos VI,
+TE3062,Integral electronic technologies project,TE2023
+TE3064,Introduction to professional development,
+VA2014,Topics V,
+VA2015,Topics VI,
