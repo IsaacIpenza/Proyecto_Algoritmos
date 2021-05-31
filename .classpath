@@ -6,9 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/benja/Desktop/Algoritmos/Codigo/ProyectoFinal/lib/opencsv-3.8.jar"/>
 	<classpathentry kind="lib" path="lib/itextpdf-5.5.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/benja/Desktop/Algoritmos/Codigo/ProyectoFinal/lib/commons-csv-1.6/commons-csv-1.6-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/benja/Desktop/Algoritmos/Codigo/ProyectoFinal/lib/commons-csv-1.6/commons-csv-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-csv-1.6/commons-csv-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-csv-1.6/commons-csv-1.6-sources.jar"/>
+	<classpathentry kind="lib" path="lib/opencsv-3.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
