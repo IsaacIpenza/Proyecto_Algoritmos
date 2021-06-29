@@ -1,5 +1,6 @@
 # Proyecto_Algoritmos
-Desarrollo del código para el proyecto final de la materia de Análisis y Diseño de Algoritmos
+Desarrollo del código para el proyecto final de la materia de Análisis y Diseño de Algoritmos 
+ -Este proyecto se desarrollo en su totalidad en JAVA.
 
 Este proyecto busca aplicar el orden topologico en un grafo para brindar la solucion
 de como un alumno podria cursar sus carrera segun la cantidad de materias que quisiera
